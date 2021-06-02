@@ -1,0 +1,244 @@
+.homeContainer {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(209, 202, 202);
+}
+.mainContainer {
+  width: 1100px;
+  height: 650px;
+  margin: 40px 35px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  padding: 30px 50px;
+  display: flex;
+  flex-direction: row;
+}
+/* Container 1 */
+.itemContainer1 {
+  border: 1px solid black;
+  width: 260px;
+  height: 650px;
+  border-radius: 20px;
+  background-image: linear-gradient(to bottom, #5b06f8, #7a37f7 96%);
+  padding: 10px 40px;
+}
+.container1Head1 {
+  color: white;
+  font-weight: 250;
+  font-size: 35px;
+}
+.container1image{
+    width: 150px;
+    height: 200px;
+    margin-top: 100px;
+    margin-left: 50px;
+}
+.container1Head2 {
+  color: white;
+  margin-top: -25px;
+  font-size: 33px;
+  font-weight: bold;
+}
+.cont1Para1 {
+  color: white;
+  width: 250px;
+  font-size: 16px;
+  margin-top: -10px;
+}
+.cont1Para2 {
+  color: white;
+  width: 270px;
+  font-size: 16px;
+  margin-top: 10px;
+}
+/* Container 2 */
+.itemContainer2 {
+  border: none;
+  width: 260px;
+  height: 550px;
+  border-radius: 20px;
+  background-color: white;
+  margin: -10px 30px;
+}
+.container2Head2 {
+  font-size: 35px;
+  width: 250px;
+}
+.content2 {
+  border: 1px solid black;
+  width: 300px;
+  height: 510px;
+  border-radius: 20px;
+  background-color: rgb(233, 230, 230);
+  padding: 10px 35px;
+}
+.container2ContentHead {
+  display: flex;
+  flex-direction: row;
+}
+.contentHead1 {
+  font-size: 32px;
+  font-weight: bold;
+}
+.contentHead2 {
+  font-size: 26px;
+  font-weight: 400;
+  margin-left: 195px;
+  margin-top: 35px;
+}
+.horizontal1 {
+  width: 17px;
+  height: 3px;
+  background-color: #5b06f8;
+  margin-left: 3px;
+  margin-top: -20px;
+  border: none;
+}
+.contentHead3 {
+  font-size: 12px;
+  opacity: 0.5;
+  margin-top: -36px;
+  align-items: center;
+}
+.tick1 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #5b06f8;
+  padding-right: 20px;
+}
+.longpara {
+  display: flex;
+  flex-direction: row;
+  margin: 30px 0px 10px 0px;
+}
+.longpoints {
+  margin-top: -0px;
+  opacity: 0.9;
+}
+.pointsblock {
+  margin: 10px 0px 10px 0px;
+}
+.points {
+  opacity: 0.9;
+}
+.viewFeature2 {
+  margin-top: 50px;
+}
+.viewFeature2 a {
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  color: black;
+  margin-left: 100px;
+}
+.button2 {
+  border-radius: 10px;
+  color: white;
+  background-color: #5b06f8;
+  font-size: 15px;
+  font-weight: bold;
+  width: 280px;
+  margin: 20px 0px 10px 20px;
+  height: 50px;
+  padding: 10px 10px 10px 10px;
+  border: none;
+}
+/* Container 3 */
+.itemContainer3 {
+    border: none;
+    width: 340px;
+    height: 550px;
+    border-radius: 20px;
+    background-color: white;
+    margin-left: 110px;
+  }
+  .itemcont3Head{
+      margin-left: 180px;
+  }
+  .container3Head{
+      text-align: right;
+  }
+  .container3Head a{
+      text-decoration: none;
+      color: #5b06f8;
+      font-weight: bold;
+  }
+  .content3 {
+    border: 1px solid black;
+    width: 290px;
+    height: 510px;
+    border-radius: 20px;
+    background-image: linear-gradient(to bottom, #5b06f8, #7a37f7 96%);
+    padding: 10px 35px;
+    margin-top: 85px;
+  }
+  .content3Head1 {
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+  }
+  .content3Head2 {
+    font-size: 26px;
+    font-weight: 400;
+    margin-left: 220px;
+    margin-top: -65px;
+    color: white;
+  }
+  .horizontal2 {
+    width: 17px;
+    height: 3px;
+    background-color: white;
+    margin-left: 3px;
+    margin-top: -5px;
+    border: none;
+  }
+  .content3Head3 {
+    font-size: 12px;
+    opacity: 0.8;
+    margin-left: 226px;
+    margin-top: -30px;
+    align-items: center;
+    color: white;
+  }
+  .content2Topic{
+      color: white;
+      margin-top: 35px;
+  }
+  .tick2 {
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    padding-right: 20px;
+  }
+  .points3{
+      color: white;
+  }
+  .longpoints3{
+      margin-top: -0px;
+      color: white;
+  }
+  .pointsblock3 {
+    margin: 10px 0px -10px 0px;
+  }
+  .viewFeature3 a {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    color: white;
+    margin-left: 80px;
+    margin-top: 20px;
+  }
+  .button3 {
+    border-radius: 10px;
+    color: #5b06f8;
+    background-color: white;
+    font-size: 15px;
+    font-weight: bold;
+    width: 280px;
+    margin: 20px 0px 10px 20px;
+    height: 50px;
+    padding: 10px 10px 10px 10px;
+    border: none;
+  }
