@@ -1,0 +1,117 @@
+.mainContainer {
+  margin: 0;
+  padding: 0;
+  width: 700px;
+  height: 1735px;
+  background-color: rgb(255, 255, 255);
+  margin: 20px 280px;
+  border-radius: 25px;
+  overflow: auto;
+}
+/* Head Container */
+.headContainer {
+  /* border: 1px solid black; */
+  width: 100%;
+  height: 240px;
+  margin-top: -30px;
+  background-color: white;
+  background-image: url("headImage.jpeg");
+  background-repeat: no-repeat;
+  background-size: 700px;
+  border-top: 25px;
+}
+.headContent {
+  width: 250px;
+  margin-left: 50px;
+  border: none;
+}
+.headContent1 {
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(28, 157, 231);
+  margin-top: 35px;
+  padding-top: 55px;
+  
+}
+.headContent2 {
+  font-size: 30px;
+  font-weight: 200;
+  color: rgb(180, 202, 214);
+  margin-top: -25px;
+}
+/* Odd Container */
+.oddContainer {
+  width: 100%;
+  height: 160px;
+  background-color: rgb(97, 199, 230);
+  display: flex;
+  flex-direction: row;
+}
+.oddContent {
+  display: flex;
+  flex-direction: column;
+}
+.oddContainer img {
+  width: 100px;
+  height: 100px;
+  margin: 30px 50px;
+}
+.oddContainer h3 {
+  font-size: 20px;
+  color: rgb(1, 1, 88);
+  margin: 30px 0px;
+}
+.oddContainer p {
+  margin-top: -20px;
+  color: rgb(9, 9, 39);
+  width: 420px;
+}
+/* Even Container */
+.evenContainer {
+  width: 100%;
+  height: 160px;
+  background-color: rgb(57, 155, 185);
+  display: flex;
+  flex-direction: row;
+}
+.evenContent {
+  display: flex;
+  flex-direction: column;
+}
+.evenContainer img {
+  width: 100px;
+  height: 100px;
+  margin: 30px 10px;
+}
+.evenContainer h3 {
+  font-size: 20px;
+  color: rgb(1, 1, 88);
+  margin: 30px 50px;
+}
+.evenContainer p {
+  margin-top: -25px;
+  margin-left: 50px;
+  color: rgb(9, 9, 39);
+  width: 415px;
+}
+/* Foot Container */
+.footContainer {
+  height: 40px;
+  width: 100%;
+  border-bottom: 35px;
+  background-color: darkblue;
+}
+.footContent {
+  display: flex;
+  flex-direction: row;
+  margin-left: 125px;
+}
+.footContent i{
+    font-size: 22px;
+    color: white;
+    margin: 7px;
+}
+.footContent p{
+    color: white;
+    margin: 10px;
+}
