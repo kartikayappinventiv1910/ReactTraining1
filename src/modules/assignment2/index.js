@@ -18,7 +18,6 @@ class Assignment2 extends Component {
       <div className={"oddContainer"}>
         <img src={img}></img>
         <div className={"oddContent"}>
-          {/* <img src={headImage} className={"headImage"}></img> */}
           <h3 className={"oddContainerHead"}>{heading}</h3>
           <p className={"oddContainerPara"}>{content}</p>
         </div>

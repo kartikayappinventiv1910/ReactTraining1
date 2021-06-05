@@ -1,0 +1,560 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+}
+/* HEADER */
+.logo {
+  margin-left: -200px;
+  margin-top: 30px;
+  border-right: 1px solid gray;
+  width: 190px;
+  height: 32px;
+}
+.header {
+  margin-top: -30px;
+  display: flex;
+  flex-direction: row;
+  background-color: #f6fcff;
+  width: 100%;
+  height: 105px;
+}
+.logoimg {
+  margin-top: -5px;
+}
+.rectangle {
+  width: 743px;
+  height: 400px;
+  margin: 0 0 1004px;
+  padding: 30px 271px 42px 270px;
+  background-image: linear-gradient(to bottom, #f6fcff, #ffffff 96%);
+}
+.headicon ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+.headicon li{
+    width: 138px;
+    margin-top: 35px;
+}
+.headicon li a {
+  text-decoration: none;
+  padding: 30px;
+  font-size: 12px;
+  font-weight: bold;
+  font-stretch: normal;
+  color: #3a4e6f;
+}
+.headicon a:hover {
+  color: #007ba7;
+}
+.headbtns{
+    display: flex;
+    flex-direction: row;
+    margin-left: 60px;
+}
+.headbtn1 {
+  width: 110px;
+  height: 40px;
+  font-size: 14px;
+  border-radius: 23px;
+  opacity: 0.9;
+  border: 2px solid #19b0e7;
+  color: #009cde;
+  font-weight: bold;
+  margin: 25px 20px 0 140px;
+  padding: 10px 30px 11px 30px;
+  cursor: pointer;
+  background-color: #f6fcff;
+}
+.headbtn2 {
+  width: 110px;
+  height: 40px;
+  font-size: 14px;
+  border-radius: 23px;
+  opacity: 0.9;
+  border: none;
+  color: #009cde;
+  font-weight: bold;
+  margin: 25px 20px 0 10px;
+  padding: 10px 30px 11px 30px;
+  cursor: pointer;
+  background-color: #c6e8f5;
+}
+/* SECTION 1 */
+.section1 {
+  display: flex;
+  flex-direction: row;
+}
+.section1Left {
+  margin-top: 200px;
+  margin-left: -70px;
+}
+.section1LeftHead {
+  font-size: 40px;
+  padding-bottom: 25px;
+}
+.section1LeftPara {
+  width: 420px;
+  font-size: 19px;
+  color: #637696;
+}
+.section1Right {
+  width: 400px;
+  height: 250px;
+  background-color: white;
+  margin-top: 175px;
+  margin-left: 100px;
+  border-radius: 15px;
+  box-shadow: 0 0 5px gray;
+  padding: 30px 40px;
+}
+.section1RightHead {
+  margin: 0px 20px;
+}
+.section1Input1 {
+  width: 250px;
+  height: 40px;
+  background-color: white;
+  margin: 30px 0px 20px 0px;
+}
+.section1input1{
+    height: 40px;
+    width: 250px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 0 3px grey;
+}
+.section1hor{
+    width: 250px;
+    height: 2px;
+}
+.section1Input2 {
+  width: 250px;
+  height: 40px;
+  background-color: white;
+  margin: 20px 0px 15px 0px;
+}
+.section1btn {
+  width: 250px;
+  height: 45px;
+  font-size: 14px;
+  border-radius: 23px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  margin: 25px 20px 0 10px;
+  padding: 10px 30px 11px 30px;
+  cursor: pointer;
+  background-color: #86c306;
+}
+.section2 {
+  display: flex;
+  flex-direction: row;
+  padding: 150px 0px;
+}
+.masterCard {
+  width: 350px;
+  height: 200px;
+  padding: 20px;
+  position: absolute;
+  border-radius: 20px;
+  box-shadow: 0px 0px 5px grey;
+  margin-left: -160px;
+  z-index: -1;
+  background-color: rgb(243, 212, 210);
+}
+.masterCard img{
+    width: 70px;
+    border-radius: 10px;
+}
+.masterPara1{
+    margin: 20px;
+    letter-spacing: 6px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #637696;
+}
+.masterPara2{
+    font-size: 15px;
+    color: #637696;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-left: 20px;
+}
+.masterSpan{
+    font-size: 15px;
+    color: #637696;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-left: 100px;
+}
+.masterDetail{display: flex;
+    flex-direction: row;
+}
+.visaCard {
+  width: 400px;
+  padding: 20px;
+  position: relative;
+  height: 240px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 5px grey;
+  margin: 30px 130px;
+  z-index: 100;
+  background-color: rgb(196, 233, 248);
+}
+.visaCard img{
+    width: 130px;
+    height: 60px;
+    border-radius: 10px;
+}
+.contentCard {
+  width: 335px;
+  height: 180px;
+  position: absolute;
+  margin: 60px 460px;
+  padding: 50px;
+  border-radius: 25px;
+  box-shadow: 0px 0px 5px grey;
+  z-index: 190;
+  background-color: white;
+}
+.section2Heading {
+  font-size: 30px;
+}
+.section2Para {
+  font-size: 18px;
+  font-weight: 500;
+  color: grey;
+  padding: 30px 0px;
+}
+/* SECTION 3 */
+.section3Head1 {
+  font-size: 30px;
+  margin-left: 180px;
+  font-weight: bolder;
+}
+.section3Head2 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-left: 265px;
+  margin-top: 20px;
+}
+.section3Cards {
+  display: flex;
+  flex-direction: row;
+  margin-left: -250px;
+}
+.oval-active {
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  margin: 0 24px 0 0;
+  padding: 15px 17px;
+  box-shadow: 0 2px 4px 0 rgba(0, 156, 222, 0.3);
+  background-color: #009cde;
+}
+.oval_inner-active {
+  /* width: 10px;
+    height: 20px; */
+  font-family: CircularStd;
+  font-size: 24px;
+  margin-top: 20px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.17;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+}
+.cardBlue {
+  width: 250px;
+  margin: 75px;
+}
+.cardBlue img {
+  width: 70px;
+  margin: 30px 80px;
+}
+.cardBlueHead {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+}
+.blueContainerHead {
+  width: 155px;
+  height: 24px;
+  margin: 6px 0 15px 4px;
+  font-family: Rubik;
+  font-size: 18px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2.5;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000808;
+}
+.blueContainerPara {
+  width: 328px;
+  height: 63px;
+  margin: 22px 46px 0px -40px;
+  font-family: NunitoSans;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.8;
+  letter-spacing: normal;
+  text-align: center;
+  color: #637696;
+}
+.card3image {
+  width: 250px;
+}
+.section3btn {
+  width: 250px;
+  height: 45px;
+  font-size: 15px;
+  border-radius: 23px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  margin: 25px 20px 50px 220px;
+  padding: 11px 30px 11px 30px;
+  cursor: pointer;
+  background-color: #009cde;
+}
+/* SECTION 4 */
+.ovalActiveGreen {
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  margin: 0 24px 0 0;
+  padding: 15px 17px;
+  box-shadow: 0 2px 4px 0 rgba(0, 156, 222, 0.3);
+  background-color: #86c306;
+}
+.section4btn {
+  width: 250px;
+  height: 45px;
+  font-size: 15px;
+  border-radius: 23px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  margin: 25px 20px 80px 220px;
+  padding: 11px 30px 11px 30px;
+  cursor: pointer;
+  background-color: #86c306;
+}
+/* SECTION 5 */
+.section5 {
+  display: flex;
+  flex-direction: row;
+  margin: 50px 0px 50px 0px;
+}
+.section5 img {
+  width: 600px;
+  margin-left: -270px;
+  border-radius: 20px;
+}
+.section5content {
+  margin-left: 70px;
+}
+.section5head {
+  width: 400px;
+  font-size: 30px;
+  font-weight: bolder;
+  margin: 0px 0px 30px 0px;
+}
+.section5content i {
+  font-size: 20px;
+  margin: 0px 20px 0px 0px;
+}
+.section5ParaHead {
+  margin: -25px 0px 20px 30px;
+  font-size: 20px;
+  font-weight: 550;
+}
+.section5ParaCont {
+  margin: 15px 0px 25px 0px;
+  font-size: 18px;
+  width: 515px;
+  color: #637696;
+}
+.section5footdiv {
+  display: flex;
+  flex-direction: row;
+  width: 400px;
+  height: 25px;
+  box-shadow: 0 0 5px grey;
+  margin: 30px 0px;
+  padding: 35px 25px;
+}
+.section5foot {
+  font-size: 16px;
+  font-weight: 600;
+  padding-right: 30px;
+}
+.section5btn {
+  width: 100px;
+  height: 45px;
+  font-size: 15px;
+  border-radius: 23px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  margin: -10px 20px;
+  padding: 10px;
+  cursor: pointer;
+  background-color: #009cde;
+}
+/* SECTION 6 */
+.section6 {
+  display: flex;
+  flex-direction: row;
+}
+.section6left {
+  padding: 10px;
+  width: 150px;
+  height: 200px;
+  margin: 30px;
+  margin-left: -100px;
+  box-shadow: 0 0 5px grey;
+}
+.boximage {
+  width: 110px;
+  margin: 10px 10px 20px 30px;
+}
+.boxcontent {
+  display: flex;
+  flex-direction: row;
+}
+.section6para {
+  font-weight: 600;
+  margin: 5px 0px 0px 10px;
+}
+.section6center {
+  width: 550px;
+  height: 220px;
+  margin: 30px;
+  margin-left: 0px;
+  box-shadow: 0 0 5px grey;
+}
+.section6Head {
+  width: 300px;
+  font-size: 32px;
+  font-weight: bold;
+  margin: 20px 120px;
+}
+.section6ParaCen {
+  width: 420px;
+  margin-left: 50px;
+  font-size: 15px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.8;
+  letter-spacing: normal;
+  text-align: center;
+  color: #637696;
+  padding: -10px 20px 10px 20px;
+}
+.section6right {
+  padding: 20px;
+  width: 150px;
+  height: 180px;
+  margin: 30px;
+  margin-left: 680px;
+  margin-top: -250px;
+  box-shadow: 0 0 5px grey;
+}
+/* SECTION 7 */
+.section7{
+    margin-top: 100px;
+}
+.section7image{
+    display: flex;
+    flex-direction: row;
+}
+.seaction7head{
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 170px;
+}
+.section7para{
+    width: 750px;
+    margin: 15px;
+    font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.8;
+  letter-spacing: normal;
+  text-align: center;
+  color: #637696;
+}
+.section7card{
+    width: 250px;
+    height: 250px;
+    margin: 50px 30px;
+
+}
+.section7imagecont{
+    width: 250px;
+    font-weight: 500;
+    font-size: 15px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 3.13;
+  margin-left: -20px;
+  letter-spacing: 2px;
+  text-align: left;
+}
+/* SECTION 8 */
+.section8{
+    display: flex;
+    flex-direction: row;
+}
+.section8 img{
+    width: 600px;
+    margin-left: -273px;
+}
+.section8content{
+    margin-top: 110px;
+    margin-left: 100px;
+}
+/* FOOTER */
+.footer{
+    margin-top: 100px;
+    margin-left: -100px;
+}
+.footerhead{
+    display: flex;
+    flex-direction: row;
+}
+.footerhead1{
+    margin: 0px 90px;
+}
+.footerhead1 h2{
+    font-size: 18px;
+    padding-bottom: 15px;
+}
+.footerhead1 p{
+    width: 150px;
+    font-size: 15px;
+    color: #637696;
+    padding: 12px 0px;
+}
+.footerhead1 i{
+    color: #637696;
+    font-size: 15px;
+    padding-right: 10px;
+    margin-top: 15px;
+}
+.iconclass{
+    display: flex;
+    flex-direction: row;
+}
