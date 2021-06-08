@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import "./index.css";
 import logo from "./logo.png";
+import bitcoin from "./bitcoin.png";
+import usa from "./usa.png";
 import mastercard from "./mastercard.png";
 import visa from "./visa.jpeg";
 import s3image1 from "./section3image1.png";
@@ -74,7 +76,10 @@ class Assignment3 extends Component {
               </ul>
             </div>
             <div className={"headbtns"}>
-              {/* <button className={"dropbtn"}><i className={"fa fa-caret-down"}></i></button> */}
+            <img src={usa} className={"dropdownimg"}></img>
+              <select className={"selectlang"}>
+                  <option className={"languageopt"}>ENG</option>
+              </select>
               <button type={"button"} className={"headbtn1"}>{"LOGIN"}</button>
               <button type={"button"} className={"headbtn2"}>{"SIGNUP"}</button>
             </div>
@@ -86,12 +91,21 @@ class Assignment3 extends Component {
             </div>
             <div className={"section1Right"}>
               <h3 className={"section1RightHead"}>{"Get your crypto now!"}</h3>
-              <div className={"section1Input1"}>
-                  <input type={"number"} className={"section1input1"}></input>
+              <button className={"sellbutton"}>{"SELL"}</button>
+              <button className={"buybutton"}>{"BUY"}</button>
+              <div className={"section1Input"}>
+                  <img src={usa} className={"inputsymbol"}></img>
+                  <input type={"number"} placeholder={"100"} className={"section1input1"}></input>
+                  <select className={"country"}>
+                  <option className={"countryoptions"}>USD</option>
+                  <option className={"countryoptions"}>IND</option>
+                  </select>
               </div>
               <hr className={"section1hor"}></hr>
-              <div className={"section1Input2"}>
-              <input type={"number"} className={"section1input1"}></input>
+              <div className={"section1Input"}>
+                  <img src={bitcoin}></img>
+                  <input type={"number"} placeholder={"0.000923445"} className={"section1input1"}></input>
+                  <img src={bitcoin}></img>
               </div>
               <button type={"button"} className={"section1btn"}>
                 {"BUY BITCOINS"}
@@ -225,13 +239,13 @@ class Assignment3 extends Component {
               <h4 className={"footerhead"}>{"SOCIAL"}</h4>
               <div className={"iconclass"}><i class="fa fa-instagram"></i><p className={"footerPara"}>{"Blog"}</p></div>
               <div className={"iconclass"}><i class="fa fa-twitter"></i><p className={"footerPara"}>{"Twitter"}</p></div>
-              <div className={"iconclass"}><i class="fa fa-facebook"></i><p className={"footerPara"}>{"Facebook"}</p></div>
+              <div className={"iconclass"}><i class="fa fa-facebook"></i><p className={"footerPara"}>{"Facebook"}</p>
               </div>
               </div>
-
+              </div>
           </div>
         </div>
-      </div>
+        </div>
     );
   }
 }

@@ -54,6 +54,22 @@
     flex-direction: row;
     margin-left: 60px;
 }
+.dropdownimg{
+    width: 20px;
+    height: 20px;
+    margin-top:40px ;
+    padding-left: 40px;
+}
+.selectlang{
+    border: none;
+    outline: none;
+    height: 20px;
+    background-color:#f6fcff ;
+    margin-top: 40px;
+    padding-left: 10px;
+    font-weight: 600;
+    color:#0e5a75 ;
+}
 .headbtn1 {
   width: 110px;
   height: 40px;
@@ -63,7 +79,7 @@
   border: 2px solid #19b0e7;
   color: #009cde;
   font-weight: bold;
-  margin: 25px 20px 0 140px;
+  margin: 25px 20px 0 60px;
   padding: 10px 30px 11px 30px;
   cursor: pointer;
   background-color: #f6fcff;
@@ -101,30 +117,59 @@
   color: #637696;
 }
 .section1Right {
-  width: 400px;
-  height: 250px;
+  width: 420px;
+  height: 270px;
   background-color: white;
-  margin-top: 175px;
+  margin-top: 155px;
   margin-left: 100px;
   border-radius: 15px;
   box-shadow: 0 0 5px gray;
   padding: 30px 40px;
 }
 .section1RightHead {
-  margin: 0px 20px;
+  margin: 0px 35px;
 }
-.section1Input1 {
-  width: 250px;
-  height: 40px;
-  background-color: white;
-  margin: 30px 0px 20px 0px;
+.sellbutton{
+    background-color: white; 
+    color:#0fa1eb; 
+    border: 2px solid #ccebfa ;
+    opacity: 0.5;
+    border-radius: 12px 0px 0px 12px;
+    font-size: 15px;
+    padding: 10px 27px;
+    font-weight: 600;
+    margin: 15px 0px 10px 35px;
+    cursor: pointer;
+}
+.buybutton{ 
+    background-color: white; 
+    color:rgb(92, 91, 91); 
+    border: 2px solid rgb(226, 221, 221) ;
+    opacity: 0.5;
+    border-radius: 0px 12px 12px 0px;
+    font-size: 15px;
+    padding: 10px 27px;
+    font-weight: 600;
+    cursor: pointer;
 }
 .section1input1{
-    height: 40px;
-    width: 250px;
-    border-radius: 20px;
+    height: 37px;
+    width: 165px;
+    border-radius: 0px;
     border: none;
-    box-shadow: 0 0 3px grey;
+    margin: 10px 10px 10px 10px;
+    border-right:1px solid rgb(204, 201, 201) ;
+    font-size: 25px;
+    color: black;
+    font-weight: 800;
+    outline: none;
+}
+.section1Input select{
+    border: none;
+    outline: none;
+    background-color: white;
+    font-size: 20px;
+    margin: 0px;
 }
 .section1hor{
     width: 250px;
