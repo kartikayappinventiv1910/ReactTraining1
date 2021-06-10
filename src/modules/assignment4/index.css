@@ -314,7 +314,7 @@
   .flexview{
       display: none;
   }
-  /*          *****   SUPPORT PAGE BY NORMAL FLEX *****             */
+  /*          *****   MEDIA QUERY *****             */
  @media screen  and (min-width:700px){   
        .leftContainer{
         display: block;
