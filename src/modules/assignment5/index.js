@@ -1,13 +1,12 @@
 import react from "react";
+
 import {
   makeStyles,
-  Drawer,
   List,
   ListItem,
   ListItemIcon,
   Button,
   TextField,
-  Toolbar,
   Typography,
   TableContainer,
   Table,
@@ -15,7 +14,12 @@ import {
   TableBody,
   TableRow,
   TableCell,
-  Paper,FormControl,InputLabel,Select,MenuItem
+  FormControl,
+  InputLabel,
+  Select,
+  MenuItem,
+  FormControlLabel,
+  Switch
 } from "@material-ui/core";
 import InboxIcon from "@material-ui/icons/Inbox";
 import DraftsIcon from "@material-ui/icons/Drafts";
@@ -26,7 +30,16 @@ import AddIcon from "@material-ui/icons/Add";
 import VpnLockIcon from "@material-ui/icons/VpnLock";
 import AccountBalanceIcon from "@material-ui/icons/AccountBalance";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
-import SearchIcon from '@material-ui/icons/Search';
+import SearchIcon from "@material-ui/icons/Search";
+import HomeIcon from '@material-ui/icons/Home';
+import AccountBalanceWalletIcon from '@material-ui/icons/AccountBalanceWallet';
+import AssignmentIndIcon from '@material-ui/icons/AssignmentInd';
+import BallotIcon from '@material-ui/icons/Ballot';
+import BusinessIcon from '@material-ui/icons/Business';
+import CameraRollIcon from '@material-ui/icons/CameraRoll';
+import DirectionsCarIcon from '@material-ui/icons/DirectionsCar';
+import EmojiEventsIcon from '@material-ui/icons/EmojiEvents';
+import AssignmentIcon from '@material-ui/icons/Assignment';
 
 const styles = makeStyles({
   mainContainer: {
@@ -38,10 +51,18 @@ const styles = makeStyles({
   menubar: {
     marginTop: "-10px",
     position: "fixed",
+    backgroundColor:"blue"
   },
   menuItem: {
     backgroundColor: "blue",
     padding: "17px",
+    color: "white",
+    width: "80px",
+    marginTop: "-10px",
+  },
+  menuItem2: {
+    backgroundColor: "black",
+    padding: "24px",
     color: "white",
     width: "80px",
     marginTop: "-10px",
@@ -56,16 +77,20 @@ const styles = makeStyles({
     position: "absolute",
     backgroundColor: "white",
     height: "70px",
-    width: "1345px",
-    margin: "0px 80px",
+    width: "1347px",
+    margin: "-10px 80px",
     boxShadow: "0 0 2px grey",
   },
+  switch:{
+    color:"green",
+    marginTop:"10px"
+  },
+
   button: {
     backgroundColor: "green",
     fontSize: "20px",
     fontWeight: "bold",
-    left: "880px",
-    top: "10px",
+    left: "860px",
     margin: "0px 20px",
     cursor: "pointer",
   },
@@ -73,14 +98,9 @@ const styles = makeStyles({
     backgroundColor: "blue",
     fontSize: "20px",
     fontWeight: "bold",
-    left: "900px",
-    top: "10px",
+    left: "880px",
     cursor: "pointer",
   },
-  // headerbottom:{
-  //     marginTop:"200px",
-  //     backgroundColor:"white"
-  // },
   search: {
     width: "600px",
     height: "300px",
@@ -105,17 +125,10 @@ const styles = makeStyles({
     padding: "10px 100px",
     cursor: "pointer",
   },
-//   inputtext: {
-//     fontSize: "20px",
-//     border: "1px solid grey",
-//     margin: "20px 10px",
-//     width: "285px",
-//     height: "50px",
-//   },
-amountinput:{
-    margin:"20px 10px",
-    width:"280px"
-},
+  amountinput: {
+    margin: "20px 10px",
+    width: "280px",
+  },
   signupfree: {
     width: "500px",
     height: "300px",
@@ -171,6 +184,7 @@ amountinput:{
   },
   buybutton: {
     backgroundColor: "orange",
+    color:"white",
     padding: "7px 25px",
     marginLeft: "-60px",
     fontSize: "15px",
@@ -243,7 +257,7 @@ amountinput:{
     position: "absolute",
     width: "700px",
     margin: "1160px -20px",
-    color: "grey",
+    color: "black",
   },
   tablecontainer2: {
     position: "absolute",
@@ -256,7 +270,7 @@ amountinput:{
     position: "absolute",
     width: "700px",
     margin: "1820px 40px",
-    color: "grey",
+    color: "black",
   },
   tablecontainer3: {
     position: "absolute",
@@ -268,9 +282,9 @@ amountinput:{
   distancecol: {
     fontSize: "20px",
   },
-  inrSelect: {
-      width:"280px",
-      margin:"20px 10px",
+  inputSelect: {
+    width: "280px",
+    margin: "20px 10px",
     color: "dark-greyTwo-color",
     "& .MuiSvgIcon-root ": {
       borderLeft: "1px solid dark-greyTwo-color",
@@ -280,13 +294,21 @@ amountinput:{
       color: "black",
     },
   },
-  searchbutton:{
+  searchbutton: {
     backgroundColor: "blue",
-    padding:"10px 240px",
+    padding: "10px 240px",
     fontSize: "17px",
     fontWeight: "600",
     margin: "10px 15px",
     cursor: "pointer",
+  },
+  steppercontent:{
+      margin:"3100px 270px",
+      position:"absolute",
+      boxShadow:"0 0 2px grey",
+      width:"800px",
+      height:"300px",
+      padding:"30px"
   }
 });
 
@@ -295,8 +317,37 @@ export default function material() {
   return (
     <div className={classes.body}>
       <div className={classes.menubar}>
-        {/* <Drawer anchor={"left"} open={true}> */}
         <List component="nav" aria-label="main mailbox folders">
+          <ListItem button className={classes.menuItem2}>
+            <ListItemIcon>
+              <HomeIcon fontSize={"large"} className={classes.icon} />
+            </ListItemIcon>
+          </ListItem>
+          <ListItem button className={classes.menuItem}>
+            <ListItemIcon>
+              <DraftsIcon fontSize={"large"} className={classes.icon} />
+            </ListItemIcon>
+          </ListItem>
+          <ListItem button className={classes.menuItem}>
+            <ListItemIcon>
+              <BallotIcon fontSize={"large"} className={classes.icon} />
+            </ListItemIcon>
+          </ListItem>
+          <ListItem button className={classes.menuItem}>
+            <ListItemIcon>
+              <BusinessIcon fontSize={"large"} className={classes.icon} />
+            </ListItemIcon>
+          </ListItem>
+          <ListItem button className={classes.menuItem}>
+            <ListItemIcon>
+              <CameraRollIcon fontSize={"large"} className={classes.icon} />
+            </ListItemIcon>
+          </ListItem>
+          <ListItem button className={classes.menuItem}>
+            <ListItemIcon>
+              <DirectionsCarIcon fontSize={"large"} className={classes.icon} />
+            </ListItemIcon>
+          </ListItem>
           <ListItem button className={classes.menuItem}>
             <ListItemIcon>
               <InboxIcon fontSize={"large"} className={classes.icon} />
@@ -304,52 +355,22 @@ export default function material() {
           </ListItem>
           <ListItem button className={classes.menuItem}>
             <ListItemIcon>
-              <DraftsIcon fontSize={"large"} className={classes.icon} />
+              <EmojiEventsIcon fontSize={"large"} className={classes.icon} />
             </ListItemIcon>
           </ListItem>
           <ListItem button className={classes.menuItem}>
             <ListItemIcon>
-              <DraftsIcon fontSize={"large"} className={classes.icon} />
+              <AccountBalanceWalletIcon fontSize={"large"} className={classes.icon} />
             </ListItemIcon>
           </ListItem>
           <ListItem button className={classes.menuItem}>
             <ListItemIcon>
-              <DraftsIcon fontSize={"large"} className={classes.icon} />
+              <AssignmentIndIcon fontSize={"large"} className={classes.icon} />
             </ListItemIcon>
           </ListItem>
           <ListItem button className={classes.menuItem}>
             <ListItemIcon>
-              <DraftsIcon fontSize={"large"} className={classes.icon} />
-            </ListItemIcon>
-          </ListItem>
-          <ListItem button className={classes.menuItem}>
-            <ListItemIcon>
-              <DraftsIcon fontSize={"large"} className={classes.icon} />
-            </ListItemIcon>
-          </ListItem>
-          <ListItem button className={classes.menuItem}>
-            <ListItemIcon>
-              <DraftsIcon fontSize={"large"} className={classes.icon} />
-            </ListItemIcon>
-          </ListItem>
-          <ListItem button className={classes.menuItem}>
-            <ListItemIcon>
-              <DraftsIcon fontSize={"large"} className={classes.icon} />
-            </ListItemIcon>
-          </ListItem>
-          <ListItem button className={classes.menuItem}>
-            <ListItemIcon>
-              <DraftsIcon fontSize={"large"} className={classes.icon} />
-            </ListItemIcon>
-          </ListItem>
-          <ListItem button className={classes.menuItem}>
-            <ListItemIcon>
-              <DraftsIcon fontSize={"large"} className={classes.icon} />
-            </ListItemIcon>
-          </ListItem>
-          <ListItem button className={classes.menuItem}>
-            <ListItemIcon>
-              <DraftsIcon fontSize={"large"} className={classes.icon} />
+              <InboxIcon fontSize={"large"} className={classes.icon} />
             </ListItemIcon>
           </ListItem>
           <ListItem button className={classes.menuItem}>
@@ -361,6 +382,16 @@ export default function material() {
         </List>
       </div>
       <div className={classes.header}>
+      <FormControlLabel
+        value="bottom"
+        control={
+    <Switch
+    checked={true}
+    className={classes.switch} />
+        }
+        label="On" className={classes.label}
+        labelPlacement="bottom"
+        />
         <Button
           variant="contained"
           color="secondary"
@@ -405,8 +436,13 @@ export default function material() {
             sell
           </Button>
           {/* <TextField label="Amount" type="number" className={classes.inputtext}/> */}
-          <TextField id="outlined-basic" label="amount" variant="outlined" className={classes.amountinput} />
-          <FormControl variant="outlined" className={classes.inrSelect}>
+          <TextField
+            id="outlined-basic"
+            label="Amount"
+            variant="outlined"
+            className={classes.amountinput}
+          />
+          <FormControl variant="outlined" className={classes.inputSelect}>
             <InputLabel id="demo-simple-select-outlined-label">INR</InputLabel>
             <Select
               labelId="demo-simple-select-outlined-label"
@@ -421,7 +457,7 @@ export default function material() {
               <MenuItem value={30}>Thirty</MenuItem>
             </Select>
           </FormControl>
-          <FormControl variant="outlined" className={classes.inrSelect}>
+          <FormControl variant="outlined" className={classes.inputSelect}>
             <InputLabel id="demo-simple-select-outlined-label">IND</InputLabel>
             <Select
               labelId="demo-simple-select-outlined-label"
@@ -436,8 +472,10 @@ export default function material() {
               <MenuItem value={30}>UK</MenuItem>
             </Select>
           </FormControl>
-          <FormControl variant="outlined" className={classes.inrSelect}>
-            <InputLabel id="demo-simple-select-outlined-label">All Online Offers</InputLabel>
+          <FormControl variant="outlined" className={classes.inputSelect}>
+            <InputLabel id="demo-simple-select-outlined-label">
+              All Online Offers
+            </InputLabel>
             <Select
               labelId="demo-simple-select-outlined-label"
               id="demo-simple-select-outlined"
@@ -506,7 +544,7 @@ export default function material() {
                 </TableRow>
               </TableHead>
               <TableBody>
-                <TableRow>
+                <TableRow hover>
                   <TableCell className={classes.sellercol}>
                     <u>chandanbits007(54;100%)</u>
                   </TableCell>
@@ -526,14 +564,13 @@ export default function material() {
                   <TableCell>
                     <Button
                       variant="contained"
-                      color="primary"
                       className={classes.buybutton}
                     >
                       BUY
                     </Button>
                   </TableCell>
                 </TableRow>
-                <TableRow>
+                <TableRow hover>
                   <TableCell className={classes.sellercol}>
                     <u>appukttam0(529;100%)</u>
                   </TableCell>
@@ -553,14 +590,13 @@ export default function material() {
                   <TableCell>
                     <Button
                       variant="contained"
-                      color="primary"
                       className={classes.buybutton}
                     >
                       BUY
                     </Button>
                   </TableCell>
                 </TableRow>
-                <TableRow>
+                <TableRow hover>
                   <TableCell className={classes.sellercol}>
                     <u>jdboi(5114;100%)</u>
                   </TableCell>
@@ -580,14 +616,13 @@ export default function material() {
                   <TableCell>
                     <Button
                       variant="contained"
-                      color="primary"
                       className={classes.buybutton}
                     >
                       BUY
                     </Button>
                   </TableCell>
                 </TableRow>
-                <TableRow>
+                <TableRow hover>
                   <TableCell className={classes.sellercol}>
                     <u>chgbyry(4535;100%)</u>
                   </TableCell>
@@ -607,14 +642,13 @@ export default function material() {
                   <TableCell>
                     <Button
                       variant="contained"
-                      color="primary"
                       className={classes.buybutton}
                     >
                       BUY
                     </Button>
                   </TableCell>
                 </TableRow>
-                <TableRow>
+                <TableRow hover>
                   <TableCell className={classes.sellercol}>
                     <u>chandanbits007(54;100%)</u>
                   </TableCell>
@@ -634,14 +668,13 @@ export default function material() {
                   <TableCell>
                     <Button
                       variant="contained"
-                      color="primary"
                       className={classes.buybutton}
                     >
                       BUY
                     </Button>
                   </TableCell>
                 </TableRow>
-                <TableRow>
+                <TableRow hover>
                   <TableCell className={classes.sellercol}>
                     <u>appukuttam(5764;100%)</u>
                   </TableCell>
@@ -661,7 +694,6 @@ export default function material() {
                   <TableCell>
                     <Button
                       variant="contained"
-                      color="primary"
                       className={classes.buybutton}
                     >
                       BUY
@@ -692,7 +724,7 @@ export default function material() {
           <TableContainer>
             <Table>
               <TableHead>
-                <TableRow>
+                <TableRow hover>
                   <TableCell className={classes.tablehead}>Buyer</TableCell>
                   <TableCell className={classes.tablehead2}>
                     Payment Methods
@@ -703,7 +735,7 @@ export default function material() {
                 </TableRow>
               </TableHead>
               <TableBody>
-                <TableRow>
+                <TableRow hover>
                   <TableCell className={classes.sellercol}>
                     <u>chandanbits007(54;100%)</u>
                   </TableCell>
@@ -723,14 +755,13 @@ export default function material() {
                   <TableCell>
                     <Button
                       variant="contained"
-                      color="primary"
                       className={classes.buybutton}
                     >
                       SELL
                     </Button>
                   </TableCell>
                 </TableRow>
-                <TableRow>
+                <TableRow hover>
                   <TableCell className={classes.sellercol}>
                     <u>appukttam0(529;100%)</u>
                   </TableCell>
@@ -750,14 +781,13 @@ export default function material() {
                   <TableCell>
                     <Button
                       variant="contained"
-                      color="primary"
                       className={classes.buybutton}
                     >
                       SELL
                     </Button>
                   </TableCell>
                 </TableRow>
-                <TableRow>
+                <TableRow hover>
                   <TableCell className={classes.sellercol}>
                     <u>jdboi(5114;100%)</u>
                   </TableCell>
@@ -777,14 +807,13 @@ export default function material() {
                   <TableCell>
                     <Button
                       variant="contained"
-                      color="primary"
                       className={classes.buybutton}
                     >
                       SELL
                     </Button>
                   </TableCell>
                 </TableRow>
-                <TableRow>
+                <TableRow hover>
                   <TableCell className={classes.sellercol}>
                     <u>chgbyry(4535;100%)</u>
                   </TableCell>
@@ -804,14 +833,13 @@ export default function material() {
                   <TableCell>
                     <Button
                       variant="contained"
-                      color="primary"
                       className={classes.buybutton}
                     >
                       SELL
                     </Button>
                   </TableCell>
                 </TableRow>
-                <TableRow>
+                <TableRow hover>
                   <TableCell className={classes.sellercol}>
                     <u>chandanbits007(54;100%)</u>
                   </TableCell>
@@ -831,14 +859,13 @@ export default function material() {
                   <TableCell>
                     <Button
                       variant="contained"
-                      color="primary"
                       className={classes.buybutton}
                     >
                       SELL
                     </Button>
                   </TableCell>
                 </TableRow>
-                <TableRow>
+                <TableRow hover> 
                   <TableCell className={classes.sellercol}>
                     <u>appukuttam(5764;100%)</u>
                   </TableCell>
@@ -858,7 +885,6 @@ export default function material() {
                   <TableCell>
                     <Button
                       variant="contained"
-                      color="primary"
                       className={classes.buybutton}
                     >
                       SELL
@@ -889,7 +915,7 @@ export default function material() {
           <TableContainer>
             <Table>
               <TableHead>
-                <TableRow>
+                <TableRow hover>
                   <TableCell className={classes.tablehead}>Buyer</TableCell>
                   <TableCell className={classes.tablehead}>Distance</TableCell>
                   <TableCell className={classes.tablehead2}>Location</TableCell>
@@ -899,7 +925,7 @@ export default function material() {
                 </TableRow>
               </TableHead>
               <TableBody>
-                <TableRow>
+                <TableRow hover>
                   <TableCell className={classes.sellercol}>
                     <u>chandanbits007(54;100%)</u>
                   </TableCell>
@@ -922,14 +948,13 @@ export default function material() {
                   <TableCell>
                     <Button
                       variant="contained"
-                      color="primary"
                       className={classes.buybutton}
                     >
                       SELL
                     </Button>
                   </TableCell>
                 </TableRow>
-                <TableRow>
+                <TableRow hover>
                   <TableCell className={classes.sellercol}>
                     <u>appukttam0(529;100%)</u>
                   </TableCell>
@@ -952,14 +977,13 @@ export default function material() {
                   <TableCell>
                     <Button
                       variant="contained"
-                      color="primary"
                       className={classes.buybutton}
                     >
                       SELL
                     </Button>
                   </TableCell>
                 </TableRow>
-                <TableRow>
+                <TableRow hover>
                   <TableCell className={classes.sellercol}>
                     <u>jdboi(5114;100%)</u>
                   </TableCell>
@@ -982,14 +1006,13 @@ export default function material() {
                   <TableCell>
                     <Button
                       variant="contained"
-                      color="primary"
                       className={classes.buybutton}
                     >
                       SELL
                     </Button>
                   </TableCell>
                 </TableRow>
-                <TableRow>
+                <TableRow hover>
                   <TableCell className={classes.sellercol}>
                     <u>chgbyry(4535;100%)</u>
                   </TableCell>
@@ -1012,7 +1035,6 @@ export default function material() {
                   <TableCell>
                     <Button
                       variant="contained"
-                      color="primary"
                       className={classes.buybutton}
                     >
                       SELL
@@ -1105,6 +1127,10 @@ export default function material() {
         </div>
         <div className={classes.horizontal2}>
           <hr></hr>
+        </div>
+        <div className={classes.steppercontent}>
+            <Typography variant="h4"><AssignmentIcon fontSize={"large"}/> Latest News</Typography>
+            <Typography>If you have an account on LocalBitcoins or Paxful and you'd like to import the reputation you have worked for while trading on these platforms, you can now do so! To do it, simply open your settings page and navigate to the reputation import tab. Your LocalBitcoins/Paxful trades will be added to your total trade count and your other stats will be displayed on your user page.</Typography>
         </div>
       </div>
     </div>
