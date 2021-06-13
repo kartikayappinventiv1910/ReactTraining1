@@ -1,0 +1,97 @@
+/*  **********INDEX PAGE*********  */
+.mainContainer{
+    width: 500px;
+    margin: 150px 400px;
+    padding: 120px 70px ;
+    box-shadow: 0 0 10px black;
+    background-color: rgb(218, 237, 238);
+}
+.loginBtn{
+    border: none;
+    cursor: pointer;
+    padding: 10px 40px;
+    background-color: rgb(72, 134, 10);
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    margin: 50px;
+}
+.signupBtn{
+    border: none;
+    cursor: pointer;
+    padding: 10px 40px;
+    background-color: rgb(30, 81, 148);
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+/*  ********LOGIN PAGE*******  */
+.loginContainer{
+    width: 400px;
+    margin: 150px 400px;
+    padding: 40px 70px ;
+    box-shadow: 0 0 10px black;
+    background-color: rgb(218, 237, 238);
+}
+.loginHeading{
+    margin-left: 120px;
+}
+.inputLabel{
+    font-size: 20px;
+    font-weight: bold;
+    width: 500px;
+    margin: 0px;
+}
+input{
+    width: 350px;
+    padding: 10px 20px;
+    margin: 10px 0px 20px 0px;
+    border-radius: 30px;
+    font-size: 20px;
+    outline: none;
+    border: none;
+}
+.submitBtn{
+    background-color: green;
+    font-size: 25px;
+    font-weight: bolder;
+    color: white;
+    border: none;
+    margin: 20px;
+    padding: 10px 30px;
+    cursor: pointer;
+}
+/* MOVIE PAGE */
+.movieContainer{
+    width: 1020px;
+    height: 400px;
+    margin: 150px;
+    padding: 30px;
+    background-color:rgb(218, 237, 238) ;
+    display: flex;
+}
+.moviecard{
+    width: 300px;
+    height: 350px;
+    background-color: thistle;
+    box-shadow: 0 0 5px black;
+    margin: 20px;
+}
+.moviecard img{
+    width: 300px;
+    height: 200px;
+}
+.moviename{
+    margin: 20px;
+    font-size: 22px;
+    font-weight: bolder;
+}
+.releasedate{
+    margin: 10px 20px;
+    font-size: 20px;
+}
+.rating{
+    margin:10px 20px ;
+    font-size: 25px;
+    font-weight: bold;
+}
