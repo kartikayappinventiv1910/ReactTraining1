@@ -1,0 +1,44 @@
+body{
+    background-color: rgb(207, 214, 228);
+}
+.headingContainer{
+    margin: 100px 0px 50px 100px;
+    width: 400px;
+    height: 340px;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 20px;
+    background-color: white;
+}
+.keysHeading{
+    margin-left: 80px;
+    font-size:35px;
+}
+.keys{
+    margin-left: 30px;
+    font-size: 20px;
+}
+.inputField{
+    outline: none;
+    border: none;
+    height: 50px;
+    width: 250px;
+    background-color: white;
+    padding: 0px 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    margin: 0px 30px 0px 100px;
+
+}
+.searchbtn{
+    outline: none;
+    border: none;
+    height: 50px;
+    background-color: rgb(138, 182, 50);
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bolder;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
