@@ -1,16 +1,16 @@
 const Data = {
-    Info: "This is Official data of a customer with dealer",
-    dealer: {
-      name: "dealer_abc",
-      address: "PQRS DEF LMN",
-      phoneNo: "9955778844",
-    },
-    customer: {
-      id: "customer_1",
-      name: "customer_abc",
-      address: "XYZ ABC MNOP",
-      phoneNo: "8498542489",
-    },
+    // Info: "This is Official data of a customer with dealer",
+    // dealer: {
+    //   name: "dealer_abc",
+    //   address: "PQRS DEF LMN",
+    //   phoneNo: "9955778844",
+    // },
+    // customer: {
+    //   id: "customer_1",
+    //   name: "customer_abc",
+    //   address: "XYZ ABC MNOP",
+    //   phoneNo: "8498542489",
+    // },
     bikes: [
       {
         price: " SGD$4,000 ",

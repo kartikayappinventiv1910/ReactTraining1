@@ -6,7 +6,8 @@ import React from 'react'
 // import Assignment4flex from './modules/assignment4flex'
 // import Assignment5 from './modules/assignment5'
 // import Assignment6 from './modules/assignment6'
-import Assignment7 from './modules/assignment7'
+// import Assignment7 from './modules/assignment7'
+import Assignment8 from './modules/assignment8'
 
 class App extends React.Component{
   render(){
@@ -19,7 +20,8 @@ class App extends React.Component{
         {/* <Assignment4flex /> */}
         {/* <Assignment5 /> */}
         {/* <Assignment6 /> */}
-        <Assignment7 />
+        {/* <Assignment7 /> */}
+        <Assignment8 />
       </div>
     );
   }

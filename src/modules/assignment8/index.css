@@ -1,0 +1,180 @@
+body{
+    background-color: rgb(240, 215, 240);
+    margin: 0;
+    padding: 0;
+}
+/* HEADER */
+.headerContainer{
+    display: flex;
+    height: 100px;
+    background-color: wheat;
+}
+.headerContainer h1{
+    margin: 30px 150px;
+    font-size: 40px;
+}
+.addButton{
+    height: 50px;
+    width: 150px;
+    margin: 30px 250px;
+    font-size: 25px;
+    font-weight: bolder;
+    cursor: pointer;
+    color: white;
+    background-color: rgb(145, 201, 35);
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+/* SEARCH CONTAINER */
+.searchinput{
+    width: 700px;
+    height: 40px;
+    font-size:25px;
+    padding:5px 15px ;
+    margin: 30px 150px;
+    border-radius: 15px;
+    border:none;
+    outline: none;
+}
+/* TABLE */
+.tableContainer{
+    margin: 50px 150px;
+}
+.tableHeading{
+    background-color: rgb(245, 240, 240);
+    font-size: 20px;
+    width: 220px;
+    height: 40px;
+}
+.tableData{
+    background-color: rgb(245, 240, 240);
+    font-size: 20px;
+    width: 220px;
+    height: 40px;
+    margin-left: 20px;
+}
+.Loader{
+    margin: 100px 250px;
+}
+.editButton{
+    margin: 10px 40px;
+    background-color:rgb(27, 136, 187) ;
+    height: 40px;
+    width: 110px;
+    font-size: 23px;
+    font-weight: bolder;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.deleteButton{
+    margin: 10px 40px;
+    background-color:rgb(236, 145, 103) ;
+    height: 40px;
+    width: 110px;
+    font-size: 23px;
+    font-weight: bolder;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+/* FORM MODAL */
+.formModal{
+    background-color: rgb(243, 220, 220);
+    width: 600px;
+    height: 400px;
+    margin: 150px 400px;
+    padding: 25px;
+}
+.formHeading{
+    margin: 10px 150px;
+    font-size: 35px;
+    padding-bottom: 10px;
+}
+.inputlabel{
+    font-size: 20px;
+    padding-right: 30px;
+    padding-top: 15px;
+}
+.inputfield{
+    border: none;
+    outline: none;
+    height: 30px;
+    border-radius: 10px;
+    padding: 2px 15px;
+    font-size: 17px;
+    margin: 0px 0px 10px 0px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+.submitButton{
+    margin: 50px;
+    background-color:rgb(145, 201, 35) ;
+    height: 40px;
+    width: 110px;
+    font-size: 23px;
+    font-weight: bolder;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.cancelButton{
+    margin: 50px;
+    background-color:rgb(236, 145, 103) ;
+    height: 40px;
+    width: 110px;
+    font-size: 23px;
+    font-weight: bolder;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+/* DELETE FORM */
+.deleteModal{
+    background-color: rgb(240, 233, 233);
+    width: 400px;
+    height: 200px;
+    margin: 150px 400px;
+    padding: 25px;
+}
+.deleteHeading{
+    margin-left: 50px;
+}
+.yesButton{
+    margin: 50px;
+    background-color:rgb(145, 201, 35) ;
+    height: 40px;
+    width: 110px;
+    font-size: 23px;
+    font-weight: bolder;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;   
+}
+.noButton{
+    background-color:rgb(236, 145, 103) ;
+    height: 40px;
+    width: 110px;
+    font-size: 23px;
+    font-weight: bolder;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
