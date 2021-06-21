@@ -105,6 +105,17 @@ body{
     border: none;
     outline: none;
     height: 30px;
+    width: 411px;
+    border-radius: 10px;
+    padding: 2px 15px;
+    font-size: 17px;
+    margin: 0px 0px 10px 0px;
+}
+.inputfield2{
+    border: none;
+    outline: none;
+    height: 30px;
+    width: 436px;
     border-radius: 10px;
     padding: 2px 15px;
     font-size: 17px;

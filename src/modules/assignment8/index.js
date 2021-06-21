@@ -8,26 +8,15 @@ import DeleteModal from "./delete";
 function Assignment8() {
   // const [userData, setUserData] = useState(allUserData);
   const [Data, setData] = useState([]);
-  const [editing, setEditing] = useState(false);
   const [arrayIndex, setArrayIndex] = useState(0);
-  const [isFormModalOpen, setFormModalOpen] = useState(false);
+  const [searchedData, setSearchedData] = useState([]);
   const [formType, setFormType] = useState("");
+
+  const [isFormModalOpen, setFormModalOpen] = useState(false);
   const [isDeleteModalOpen, setDeleteModalOpen] = useState(false);
   const [doSearch, setDoSearch] = useState(false);
-  const [searchedData, setSearchedData] = useState([]);
   const [isLoader, setIsLoader] = useState(false);
 
-  const handleOnEdit = (data, ind) => {
-    Data[ind] = data;
-    setData(Data);
-  };
-
-  const handleOnDelete = (ind) => {
-    let data = Data.filter((curr, index) => {
-      return ind !== index;
-    });
-    setData(data);
-  };
 
   const handleSearch = (e) => {
     if (e.target.value === "") setDoSearch(false);
@@ -44,8 +33,21 @@ function Assignment8() {
         });
         setSearchedData(customData);
         setIsLoader(false);
-      }, 2000);
+      }, 1000);
     }
+  };
+
+
+  const handleOnEdit = (data, ind) => {
+    Data[ind] = data;
+    setData(Data);
+  };
+
+  const handleOnDelete = (ind) => {
+    let data = Data.filter((curr, index) => {
+      return ind !== index;
+    });
+    setData(data);
   };
 
 
