@@ -27,8 +27,7 @@ function Assignment8() {
       setTimeout(() => {
         let customData = Data.filter((curr) => {
           return (
-            curr.fname.indexOf(searchValue) > -1 ||
-            curr.email.indexOf(searchValue) > -1
+            curr.fname.indexOf(searchValue) > -1
           );
         });
         setSearchedData(customData);
@@ -89,7 +88,7 @@ function Assignment8() {
         type={"text"}
         id={"search"}
         name={"search"}
-        placeholder={"Search by First Name or Email Id"}
+        placeholder={"Search by Entering First Name"}
         onKeyUp={handleSearch}
       />
       <div className={"tableContainer"}>
