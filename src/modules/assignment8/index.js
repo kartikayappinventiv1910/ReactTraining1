@@ -32,7 +32,7 @@ function Assignment8() {
         });
         setSearchedData(customData);
         setIsLoader(false);
-      }, 1000);
+      }, 1500);
     }
   };
 
@@ -91,6 +91,7 @@ function Assignment8() {
         placeholder={"Search by Entering First Name"}
         onKeyUp={handleSearch}
       />
+      <h2 className={"tableHead"}><u>{"Registered User"}</u></h2>
       <div className={"tableContainer"}>
         {isLoader ? (
           <div className={"Loader"}>
@@ -99,7 +100,6 @@ function Assignment8() {
         ) : (
           <table>
             <thead>
-              {Data.length !== 0 && (
                 <tr>
                   <th className={"tableHeading"}>{"First Name"}</th>
                   <th className={"tableHeading"}>{"Last Name"}</th>
@@ -108,7 +108,6 @@ function Assignment8() {
                   <th className={"tableHeading"}>{"Change Info"}</th>
                   <th className={"tableHeading"}>{"DELETE"}</th>
                 </tr>
-              )}
             </thead>
 
             <tbody>
@@ -145,7 +144,7 @@ function Assignment8() {
                   })
                 ) : (
                   <tr>
-                    <td colSpan="5">{"No records found"}</td>
+                    <td className={"noSuchData"}>{"No Such Data Exist"}</td>
                   </tr>
                 )
               ) : (
@@ -164,7 +163,6 @@ function Assignment8() {
                             setArrayIndex(ind);
                           }}
                           className="editButton"
-                          aria-hidden="true"
                         >EDIT</button></td>
                         <td className={"tableData"}>
                         <button
