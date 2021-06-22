@@ -88,7 +88,7 @@ function Assignment8() {
         type={"text"}
         id={"search"}
         name={"search"}
-        placeholder={"Search by Entering First Name"}
+        placeholder={"Search User by Entering First Name"}
         onKeyUp={handleSearch}
       />
       <h2 className={"tableHead"}><u>{"Registered User"}</u></h2>
