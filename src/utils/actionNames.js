@@ -1,0 +1,3 @@
+export const INCREMENT = "INCREMENT";
+export const DECREMENT = "DECREMENT";
+export const FETCH_SUCCESS_DATA="FETCH_SUCCESS_DATA";

@@ -1,7 +1,7 @@
 import React from "react";
 import Login from "./Login";
 
-function Assignment9() {
+function Assignment10() {
   return (
     <div>
       <Login />
@@ -9,4 +9,4 @@ function Assignment9() {
   );
 }
 
-export default Assignment9;
+export default Assignment10;
