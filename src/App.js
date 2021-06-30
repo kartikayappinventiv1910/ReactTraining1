@@ -16,15 +16,19 @@ import React from 'react'
 // import Login from './modules/assignment9/Login';
 // import ProductDetail from './modules/assignment9/ProductDetail';
 
-import Counter from "./modules/assignment11";
-import { Provider } from "react-redux";
-import store from "./store";
+// import Counter from "./modules/assignment11";
+// import { Provider } from "react-redux";
+// import store from "./store";
 
-class App extends React.Component{
-  render(){
-    return(
-      <Provider store={store}>
-        <div>
+import {ThemeContext,initialState} from "./modules/assignment12";
+import {MainScreen} from "./modules/assignment12/MainScreen"
+import Assignment12 from "./modules/assignment12"
+
+// class App extends React.Component{
+//   render(){
+//     return(
+//       <Provider store={store}>
+//         <div>
         {/* <Home /> */}
         {/* <Assignment2 /> */}
         {/* <Assignment3 /> */}
@@ -51,13 +55,31 @@ class App extends React.Component{
           </Switch>
         </Router> */}
 
-        <Counter />
-      </div>
-      </Provider>
+        {/* <Counter /> */}
+
+        
+//       </div>
+//        </Provider>
       
       
-    );
-  }
+//     );
+//   }
+// }
+
+
+
+const App = (props) => {
+  // const [theme,setTheme] = useState({
+  //   light: {background:"white",color:"black"},
+  // })
+  return(
+    <div>
+      {/* <ThemeContext.Provider value={initialState.dark}> */}
+      {/* <MainScreen/> */}
+      {/* </ThemeContext.Provider> */}
+      <Assignment12 />
+    </div>
+  );
 }
 
 export default App;

@@ -11,8 +11,11 @@ import {
 } from "@material-ui/core";
 
 const styles = makeStyles({
-    body: {
+    mainContainer: {
+        margin:"-50px 0px",
         backgroundColor: "AliceBlue",
+        width:"100%",
+        height:"700px"
       },
       header:{
           margin:"50px 550px"
@@ -55,7 +58,7 @@ const styles = makeStyles({
         fontWeight:"bold"
     },
     tablebodycell:{
-        width:"100px",
+        width:"200px",
     }
 });
 
@@ -69,7 +72,7 @@ function Counter() {
   console.log(userData);
 
   return (
-    <>
+    <div className={classes.mainContainer}>
       <div className={classes.header}>
       <div className={classes.counterName}>Counter: {counter}</div>
       <button className={classes.buttons}
@@ -113,7 +116,7 @@ function Counter() {
                       <TableRow>
                         <TableCell className={classes.tableheadcell}>{user.id}</TableCell>
                         <TableCell className={classes.tablebodycell}>{user.name}</TableCell>
-                        <TableCell>{user.year}</TableCell>
+                        <TableCell className={classes.tablebodycell}>{user.year}</TableCell>
                       </TableRow>
                     </TableBody>
                   </div>
@@ -122,7 +125,7 @@ function Counter() {
           </Table>
         </TableContainer>
       </div>
-    </>
+    </div>
   );
 }
 
