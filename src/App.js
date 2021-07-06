@@ -23,6 +23,8 @@ import React from 'react'
 import {ThemeContext,initialState} from "./modules/assignment12";
 import {MainScreen} from "./modules/assignment12/MainScreen"
 import Assignment12 from "./modules/assignment12"
+import Assignment13 from "./modules/assignment13"
+import Assignment14 from "./modules/assignment14"
 
 // class App extends React.Component{
 //   render(){
@@ -77,7 +79,9 @@ const App = (props) => {
       {/* <ThemeContext.Provider value={initialState.dark}> */}
       {/* <MainScreen/> */}
       {/* </ThemeContext.Provider> */}
-      <Assignment12 />
+      {/* <Assignment12 /> */}
+      {/* <Assignment13 /> */}
+      <Assignment14 />
     </div>
   );
 }
