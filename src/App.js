@@ -20,12 +20,12 @@ import React from 'react'
 // import { Provider } from "react-redux";
 // import store from "./store";
 
-import {ThemeContext,initialState} from "./modules/assignment12";
-import {MainScreen} from "./modules/assignment12/MainScreen"
-import Assignment12 from "./modules/assignment12"
-import Assignment13 from "./modules/assignment13"
-import Assignment14 from "./modules/assignment14"
-
+// import {ThemeContext,initialState} from "./modules/assignment12";
+// import {MainScreen} from "./modules/assignment12/MainScreen"
+// import Assignment12 from "./modules/assignment12"
+// import Assignment13 from "./modules/assignment13"
+// import Assignment14 from "./modules/assignment14"
+import Assignment15 from "./modules/assignment15"
 // class App extends React.Component{
 //   render(){
 //     return(
@@ -81,7 +81,8 @@ const App = (props) => {
       {/* </ThemeContext.Provider> */}
       {/* <Assignment12 /> */}
       {/* <Assignment13 /> */}
-      <Assignment14 />
+      {/* <Assignment14 /> */}
+      <Assignment15 />
     </div>
   );
 }
