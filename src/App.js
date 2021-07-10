@@ -31,19 +31,19 @@ import Assignment15 from "./modules/assignment15"
 //     return(
 //       <Provider store={store}>
 //         <div>
-        {/* <Home /> */}
-        {/* <Assignment2 /> */}
-        {/* <Assignment3 /> */}
-        {/* <Assignment4 /> */}
-        {/* <Assignment4flex /> */}
-        {/* <Assignment5 /> */}
-        {/* <Assignment6 /> */}
-        {/* <Assignment7 /> */}
-        {/* <Assignment8 /> */}
+        /* <Home /> */
+        /* <Assignment2 /> */
+        /* <Assignment3 /> */
+        /* <Assignment4 /> */
+        /* <Assignment4flex /> */
+        /* <Assignment5 /> */
+        /* <Assignment6 /> */
+        /* <Assignment7 /> */
+        /* <Assignment8 /> */
 
-        {/* ASSIGNMENT 9 */}
-        {/* <Assignment9 /> */}
-        {/* <Router>
+        /* ASSIGNMENT 9 */
+        /* <Assignment9 /> */
+        /* <Router>
         <Switch>
             <Route path={"/"} exact>
               <Login />
@@ -55,9 +55,9 @@ import Assignment15 from "./modules/assignment15"
               <ProductDetail />
             </Route>
           </Switch>
-        </Router> */}
+        </Router> */
 
-        {/* <Counter /> */}
+        /* <Counter /> */
 
         
 //       </div>

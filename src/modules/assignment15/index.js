@@ -1,20 +1,20 @@
 import React, { useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
 import MainTable  from "./maintable";
-import { LocationApi } from "./action";
-import Assignment14 from "../assignment14";
+// import { useSelector, useDispatch } from "react-redux";
+// import { LocationApi } from "./action";
 
 function Assignment15() {
-  const dispatch = useDispatch();
-  let {userLocation} = useSelector((state) => 
-    state.locationReducer
-);
-  useEffect(() => {
-    dispatch(LocationApi());
-  }, []);
+//   const dispatch = useDispatch();
+//   let {userLocation} = useSelector((state) => 
+//     state.locationReducer
+// );
+//   useEffect(() => {
+//     dispatch(LocationApi());
+//   }, []);
   return (
     <div>
-      <MainTable userLocation={userLocation}/>
+      {/* <MainTable userLocation={userLocation}/> */}
+      <MainTable />
     </div>
   );
 }

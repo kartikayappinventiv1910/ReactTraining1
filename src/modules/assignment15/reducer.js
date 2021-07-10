@@ -16,7 +16,7 @@ export const locationReducer = (state=initialState,action)=>{
             error:action.payload,
         }
         case LOCATION_UPDATE: return{
-            userLocation:[action.payload],
+            userLocation:[...action.payload],
             error:"",
         }
         default:return state;

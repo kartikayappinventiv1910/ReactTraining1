@@ -7,12 +7,11 @@ import {
   TableRow,
   TableCell,
   makeStyles,
-  TextField,
   Button,
 } from "@material-ui/core";
-import { BorderBottom } from "@material-ui/icons";
 import { locationUpdate } from "./action";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { LocationApi } from "./action";
 
 const styles = makeStyles({
   maincontainer: {
@@ -64,8 +63,12 @@ const styles = makeStyles({
     fontSize: "17px",
     fontWeight: "bold",
     color: "white",
-    marginLeft: "600px",
+    marginLeft: "200px",
   },
+  error:{
+      border:"1px solid red",
+    //   backgroundColor:"red"
+  }
 });
 
 export default function MainTable(props) {
@@ -76,9 +79,16 @@ export default function MainTable(props) {
   const [order, setOrder] = useState("asc");
   const [savebtn, setSaveBtn] = useState(true);
   const [sorted, setSorted] = useState([]);
+  const [error,setError] = useState(false);
+
+  let { userLocation } = useSelector((state) => state.locationReducer);
 
   useEffect(() => {
-    setSorted([...props.userLocation]);
+    dispatch(LocationApi());
+  }, []);
+
+  useEffect(() => {
+    setSorted([...userLocation]);
   }, []);
 
   const handleSearch = (e) => {
@@ -86,9 +96,8 @@ export default function MainTable(props) {
     else {
       setDoSearch(true);
       let searchValue = e.target.value;
-      // console.log(searchValue);
-      // console.log("jsd", locationdata);
-      let searchArr = props.userLocation.filter((current) => {
+    //   console.log(searchValue)
+      let searchArr = sorted.filter((current) => {
         return Object.values(current).some((value) =>
           value.toString().toLowerCase().includes(searchValue)
         );
@@ -98,16 +107,16 @@ export default function MainTable(props) {
   };
 
   function handleSort(key) {
-    let arraycopy = [...sorted];
+    // let arraycopy = [...sorted];
     // console.log("copy", arrayCopy);
     // console.log("key", key);
     // console.log(sorted);
     // arraycopy.sort(compareBy(key));
     setSorted(sorted.sort(compareBy(key)));
-    if (order == "asc") {
+    if (order === "asc") {
       setOrder("desc");
     }
-    if (order == "desc") {
+    if (order === "desc") {
       setOrder("asc");
     }
     // setSorted(arraycopy);
@@ -137,13 +146,27 @@ export default function MainTable(props) {
     // const oldData=JSON.parse(JSON.stringify(sorted));
     console.log(oldData);
     oldData[row][column] = value;
+    handleInput(row,column,value);
     setSorted(oldData);
-    console.log("changed", sorted);
+    // console.log("changed", sorted);
   }
 
   function handleSubmit() {
     dispatch(locationUpdate(oldData));
     console.log(sorted);
+    setSaveBtn(true);
+    setError(false)
+  }
+
+  function handleInput(row,column,value) {
+      if(value==""){
+          setSaveBtn(true);
+          setError(true);
+      }
+      else{
+          setSaveBtn(false);
+          setError(false)
+      }
   }
 
   return (
@@ -228,13 +251,13 @@ export default function MainTable(props) {
                         <input
                           //   defaultValue={item.number}
                           value={item.number}
-                          className={classes.textfield}
+                          className={`${classes.textfield} ${error && classes.error}`}
                           onChange={(e) =>
                             handleTextfield(index, "number", e.target.value)
                           }
                         ></input>
                       </TableCell>
-                      <TableCell className={classes.tablebodycell}>
+                      <TableCell className={`${classes.textfield} ${error && classes.error}`}>
                         <input
                           //   defaultValue={item.name}
                           value={item.name}
@@ -244,7 +267,7 @@ export default function MainTable(props) {
                           }
                         ></input>
                       </TableCell>
-                      <TableCell className={classes.tablebodycell}>
+                      <TableCell className={`${classes.textfield} ${error && classes.error}`}>
                         <input
                           //   defaultValue={item.city}
                           value={item.city}
@@ -254,7 +277,7 @@ export default function MainTable(props) {
                           }
                         ></input>
                       </TableCell>
-                      <TableCell className={classes.tablebodycell}>
+                      <TableCell className={`${classes.textfield} ${error && classes.error}`}>
                         <input
                           //   defaultValue={item.state}
                           value={item.state}
@@ -264,7 +287,7 @@ export default function MainTable(props) {
                           }
                         ></input>
                       </TableCell>
-                      <TableCell className={classes.tablebodycell}>
+                      <TableCell className={`${classes.textfield} ${error && classes.error}`}>
                         <input
                           //   defaultValue={item.country}
                           value={item.country}
@@ -274,7 +297,7 @@ export default function MainTable(props) {
                           }
                         ></input>
                       </TableCell>
-                      <TableCell className={classes.tablebodycell}>
+                      <TableCell className={`${classes.textfield} ${error && classes.error}`}>
                         <input
                           //   defaultValue={item.postcode}
                           value={item.postcode}
@@ -284,7 +307,7 @@ export default function MainTable(props) {
                           }
                         ></input>
                       </TableCell>
-                      <TableCell className={classes.tablebodycell}>
+                      <TableCell className={`${classes.textfield} ${error && classes.error}`}>
                         <input
                           //   defaultValue={item.longitude}
                           value={item.longitude}
@@ -294,7 +317,7 @@ export default function MainTable(props) {
                           }
                         ></input>
                       </TableCell>
-                      <TableCell className={classes.tablebodycell}>
+                      <TableCell className={`${classes.textfield} ${error && classes.error}`}>
                         <input
                           //   defaultValue={item.latitude}
                           value={item.latitude}
@@ -316,7 +339,7 @@ export default function MainTable(props) {
               sorted?.map((item, index) => {
                 return (
                   <TableRow key={item.index}>
-                    <TableCell className={classes.tablebodycell}>
+                    <TableCell className={`${classes.tablebodycell} ${error && classes.error}`}>
                       <input
                         // defaultValue={item.number}
                         value={item.number}
@@ -326,7 +349,7 @@ export default function MainTable(props) {
                         }
                       ></input>
                     </TableCell>
-                    <TableCell className={classes.tablebodycell}>
+                    <TableCell className={`${classes.tablebodycell} ${error && classes.error}`}>
                       <input
                         // defaultValue={item.name}
                         value={item.name}
@@ -336,7 +359,7 @@ export default function MainTable(props) {
                         }
                       ></input>
                     </TableCell>
-                    <TableCell className={classes.tablebodycell}>
+                    <TableCell className={`${classes.tablebodycell} ${error && classes.error}`}>
                       <input
                         // defaultValue={item.city}
                         value={item.city}
@@ -346,7 +369,7 @@ export default function MainTable(props) {
                         }
                       ></input>
                     </TableCell>
-                    <TableCell className={classes.tablebodycell}>
+                    <TableCell className={`${classes.tablebodycell} ${error && classes.error}`}>
                       <input
                         // defaultValue={item.state}
                         value={item.state}
@@ -356,7 +379,7 @@ export default function MainTable(props) {
                         }
                       ></input>
                     </TableCell>
-                    <TableCell className={classes.tablebodycell}>
+                    <TableCell className={`${classes.tablebodycell} ${error && classes.error}`}>
                       <input
                         // defaultValue={item.country}
                         value={item.country}
@@ -366,7 +389,7 @@ export default function MainTable(props) {
                         }
                       ></input>
                     </TableCell>
-                    <TableCell className={classes.tablebodycell}>
+                    <TableCell className={`${classes.tablebodycell} ${error && classes.error}`}>
                       <input
                         // defaultValue={item.postcode}
                         value={item.postcode}
@@ -376,7 +399,7 @@ export default function MainTable(props) {
                         }
                       ></input>
                     </TableCell>
-                    <TableCell className={classes.tablebodycell}>
+                    <TableCell className={`${classes.tablebodycell} ${error && classes.error}`}>
                       <input
                         // defaultValue={item.longitude}
                         value={item.longitude}
@@ -386,7 +409,7 @@ export default function MainTable(props) {
                         }
                       ></input>
                     </TableCell>
-                    <TableCell className={classes.tablebodycell}>
+                    <TableCell className={`${classes.tablebodycell} ${error && classes.error}`}>
                       <input
                         // defaultValue={item.latitude}
                         value={item.latitude}

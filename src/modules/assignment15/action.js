@@ -38,7 +38,7 @@ export function LocationApi(){
       return async (dispatch)=>{
           try{
           let locationData = [];
-          const response = await axios.get("https://randomuser.me/api/?results=5")
+          const response = await axios.get("https://randomuser.me/api/?results=4")
           response.data.results.map((item)=>{
               locationData.push(flattenObj(item.location));
           })

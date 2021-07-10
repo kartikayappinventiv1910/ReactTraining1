@@ -8,7 +8,7 @@ import {
   TableCell,
   makeStyles,
 } from "@material-ui/core";
-import { BorderBottom } from "@material-ui/icons";
+// import { BorderBottom } from "@material-ui/icons";
 
 const styles = makeStyles({
   maincontainer: {
@@ -146,10 +146,10 @@ function Assignment14() {
     // console.log("arrstr", arrString);
     arraycopy.sort(compareBy(key));
     // console.log("copy", arraycopy);
-    if (order == "asc") {
+    if (order === "asc") {
       setOrder("desc");
     }
-    if (order == "desc") {
+    if (order === "desc") {
       setOrder("asc");
     }
     setLocation(arraycopy);
